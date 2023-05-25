@@ -1,9 +1,9 @@
 <?php
 
-const MYSQL_HOST = 'http://10.96.16.1/';
-const MYSQL_PORT = 8080;
+const MYSQL_HOST = '10.96.16.1';
+const MYSQL_PORT = 3306;
 const MYSQL_NAME = 'pokemon';
-const MYSQL_USER = 'root';
+const MYSQL_USER = 'admin';
 const MYSQL_PASSWORD = '';
 
 try {
@@ -17,4 +17,4 @@ try {
     die('Erreur : '.$exception->getMessage());
 }
 
-<?
+?>
