@@ -70,13 +70,13 @@
         include_once("configMysql.php");
 
         // Récupérer les types depuis la base de données
-        $query = "SELECT * FROM types";
+        $query = "SELECT * FROM type";
         $result = $mysqlClient->query($query);
 
         // Vérifier s'il y a des types
           foreach ($result->fetchAll(PDO::FETCH_ASSOC) as $row) 
           {
-            echo '<option value="'.$row["id"].'">'.$row["name"].'</option>';
+            echo '<option value="'.$row["id"].'">'.$row["nom"].'</option>';
           }
       ?>
     </select>
@@ -84,6 +84,20 @@
     <label for="Région">Région:</label>
     <select id="Région" name="Région" required>
       <option value="">Sélectionner une région</option>
+      <?php
+        // Inclure le fichier de configuration de la base de données
+        include_once("configMysql.php");
+
+        // Récupérer les types depuis la base de données
+        $query = "SELECT * FROM region";
+        $result = $mysqlClient->query($query);
+
+        // Vérifier s'il y a des types
+          foreach ($result->fetchAll(PDO::FETCH_ASSOC) as $row) 
+          {
+            echo '<option value="'.$row["id"].'">'.$row["nom"].'</option>';
+          }
+      ?>
     </select>
   </form>
 </body>
