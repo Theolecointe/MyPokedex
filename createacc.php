@@ -8,14 +8,14 @@
 <body>
   <h1>Création de compte</h1>
 
-  <form action="submitcreateaccount.php" method="post">
+  <form action="submitcreateaccount.php" method="POST">
     <label for="nom">Nom du dresseur:</label>
     <input type="text" id="nom" name="nom" required><br><br>
 
   
 
     <label for="motdepasse">Mot de passe:</label>
-    <input type="password" id="motdepasse" name="motdepasse" required><br><br>
+    <input type="password" id="motdepasse" name="password" required><br><br>
 
 
     <label for="motdepasse">A combien estimez vous votre niveau ? :</label>

@@ -17,7 +17,7 @@
 
 	
 <h2>Connexion au compte dresseur</h2>
-  <form action="traitement.php" method="post">
+  <form action="login.php" method="post">
     <label for="identifiant">Nom du dresseur:</label>
     <input type="text" id="identifiant" name="identifiant" required><br><br>
 
