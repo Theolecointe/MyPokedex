@@ -26,18 +26,8 @@ else {
 			echo('connexion réussi'); 
 
 			$loggedUser = $identifiant;
-
-			setcookie(
-            'LOGGED_USER',
-            $loggedUser,
-            [
-                'expires' => time() + 365*24*3600,
-                'secure' => true,
-                'httponly' => true,
-            ]
-            );
-
             $_SESSION['LOGGED_USER'] = $loggedUser;
+            header("Refresh:0");
 
         } else {
             $errorMessage = sprintf('Les informations envoyées ne permettent pas de vous identifier : (%s/%s)',

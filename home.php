@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-<?php session_start(); ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
 <body id="page-top">
 
 
-<?php if (isset($_COOKIE['LOGGED_USER']) || isset($_SESSION['LOGGED_USER'])) {
+<?php if (isset($_SESSION['LOGGED_USER'])) {
 
 			echo ('Page une fois connecté');
 		} 

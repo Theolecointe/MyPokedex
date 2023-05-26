@@ -45,6 +45,20 @@
       <button onclick="window.location.href = 'page-mes-pokemons.html';">Info</button>
     </div>
     <div class="header-box">
-      <button onclick="window.location.href = 'page-pokedex.html';">Déconnexion</button>
+      <button onclick="window.location.href = 'home.php?disconnect=true';">Déconnexion</button>
+      <?php
+      if(isset($_GET["disconnect"]))
+      {
+        $_SESSION = array();
+          session_destroy();
+          header("location: home.php");
+      }
+
+
+// Détruire toutes les variables de session
+
+
+?>
+  
 
 </div>
