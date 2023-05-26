@@ -17,7 +17,7 @@
   
 
     <label for="motdepasse">Mot de passe:</label>
-    <input type="password" id="motdepasse" name="motdepasse" required><br><br>
+    <input type="password" id="motdepasse" name="password" required><br><br>
 
 
     <label for="motdepasse">A combien estimez vous votre niveau ? :</label>
