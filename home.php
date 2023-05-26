@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,20 +16,16 @@
 <body id="page-top">
 
 
-	
-<h2>Connexion au compte dresseur</h2>
-  <form action="login.php" method="post">
-    <label for="identifiant">Nom du dresseur:</label>
-    <input type="text" id="identifiant" name="identifiant" required><br><br>
+<?php if (isset($_COOKIE['LOGGED_USER']) || isset($_SESSION['LOGGED_USER'])) {
 
-    <label for="motdepasse">Mot de passe:</label>
-    <input type="password" id="motdepasse" name="motdepasse" required><br><br>
+			echo ('Page une fois connecté');
+		} 
 
+		else{
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" value="Se connecter"> <br> <br> <br> <br>
-    <button onclick="window.location.href = 'createacc.php';">Créer son compte</button>
-  </form>
-
+			include_once('login.php');
+		}
+?>
 
 </body>
 </html>
