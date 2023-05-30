@@ -1,5 +1,7 @@
 <?php include 'header.php'; ?>
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +10,7 @@
 <body>
   <h1>Création de compte</h1>
 
-  <form action="submitcreateaccount.php" method="POST">
+  <form action="submitcreateaccount.php" method="post">
     <label for="nom">Nom du dresseur:</label>
     <input type="text" id="nom" name="nom" required><br><br>
 

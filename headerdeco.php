@@ -2,7 +2,8 @@
 
   <div class="header-box">
 
-<style>
+  <title>Site Pokemon</title>
+  <style>
     /* Styles CSS pour l'en-tête */
     header {
       background-color: #f2f2f2;
@@ -12,20 +13,20 @@
     }
 
     .header-box {
-      margin-right: 17px;
+      margin-right: 10px;
     }
 
     .header-box button {
       background: none;
       border: none;
-      font-size: 16px;
+      font-size: 20px;
       color: #333;
       cursor: pointer;
     }
 
     .header-image {
-      margin-right: 20px;
-      width: 100px;
+      margin-right: 50px;
+      width: 75px;
     }
   </style>
  <img src="pokedex2.png" alt="Logo Pokemon" class="header-image">
@@ -37,6 +38,6 @@
         <button onclick="window.location.href = 'page-connexion.php';">Info</button>
       </div>
       <div class="header-box">
-        <button onclick="window.location.href = 'page-inscription.php';">Connexion</button>
+        <button onclick="window.location.href = 'login.php';">Connexion</button>
       
       </div>
