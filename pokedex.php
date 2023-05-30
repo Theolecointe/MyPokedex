@@ -90,6 +90,32 @@
     <p>DRACAUFEU</p>
     <p>Feu/Vol</p>
   </div>
+  <div class="footer">
+<?php include_once('footer/footer.php'); ?>
+<style>
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.page-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.content-wrapper {
+    padding-bottom: 2.5rem; /* Hauteur du pied de page */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; /* Hauteur du pied de page */
+}
+</style>
+</div>
   
   
 </body>
