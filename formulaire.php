@@ -58,9 +58,9 @@
 </head>
 <body>
   <h2>Ajout d'un Pokemon</h2>
-  <form action="ajouter.php" method="POST">
+  <form action="addpokemon.php" method="POST">
     <label for="Pokemon">Pokemon:</label>
-    <input type="text" id="Pokemon" name="Pokemon" required>
+    <input type="text" id="name" name="name" required>
 
     <label for="type">type:</label>
     <select id="type" name="type" required>
@@ -82,7 +82,7 @@
     </select>
 
     <label for="Région">Région:</label>
-    <select id="Région" name="Région" required>
+    <select id="region" name="region" required>
       <option value="">Sélectionner une région</option>
       <?php
         // Inclure le fichier de configuration de la base de données
@@ -99,6 +99,7 @@
           }
       ?>
     </select>
+    <input type="submit"></input>
   </form>
 </body>
 </html>
