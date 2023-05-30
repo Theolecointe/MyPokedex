@@ -18,7 +18,7 @@
 
 <?php if (isset($_SESSION['LOGGED_USER'])) {
 
-			include_once('homeConnected');
+			include_once('homeConnected.php');
 		} 
 
 		else{
