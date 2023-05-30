@@ -2,11 +2,11 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Poke</title>
+	<title>Home</title>
 
 
 
@@ -18,7 +18,7 @@
 
 <?php if (isset($_SESSION['LOGGED_USER'])) {
 
-			echo ('Page une fois connecté');
+			include_once('homeConnected');
 		} 
 
 		else{
