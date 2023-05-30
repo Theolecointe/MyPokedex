@@ -39,7 +39,7 @@
       <button onclick="window.location.href = 'page-pokedex.html';">Mes combats</button>
     </div>
     <div class="header-box">
-      <button onclick="window.location.href = 'page-connexion.html';">Pokedex</button>
+      <button onclick="window.location.href = 'fonction_listepokemon.php';">Pokedex</button>
     </div>
     <div class="header-box">
       <button onclick="window.location.href = 'page-mes-pokemons.html';">Info</button>
