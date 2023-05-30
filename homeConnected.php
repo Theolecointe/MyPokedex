@@ -1,4 +1,5 @@
-<?php session_start(); 
+<?php 
+
 
 include_once('header.php'); 
 
@@ -33,14 +34,54 @@ include_once('retrivePokemon.php');
 	<h1> Mes Pokemon </h1>
 
 
-		Nom 
+		<table>
+		    <thead>
+			    <tr>
+			        <th>Nom</th>
+			        <th>Région</th>
+			        <th>Type</th>
+			    </tr>
+		    </thead>
+		    <tbody>
+		      
+		    	<?php
 
-		Type 
 
-		Region
+		    		foreach ($responseRetrivePokemon as $row) {
+		    			
+		            echo "<tr>";
+		            echo "<td>" . $row["nom"] . "</td>";
+		            echo "<td>" . $row["region_nom"] . "</td>";
 
-		Sexe
 
+
+		            $retriveType = $mysqlClient ->prepare('SELECT type.nom as type FROM type JOIN est_de_type ON est_de_type.id_Type =
+		            	type.id JOIN pokemon ON est_de_type.id_pkmn = pokemon.id WHERE pokemon.nom = :nompokemon'); 
+		            $retriveType -> execute([
+
+		            	'nompokemon' => $row['nom'],
+
+		            ]);
+
+		            $responseRetriveType = $retriveType->fetchAll(PDO::FETCH_ASSOC);
+
+		            echo "<td>";
+
+		            foreach ($responseRetriveType as $line) {
+
+		            	echo ($line['type']);
+
+		            }
+		            echo "</td>";
+
+		    		}
+
+
+		         
+		        
+		    	?>
+		    </tbody>
+  	</table>
 
 	
 </body>
