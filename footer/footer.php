@@ -7,9 +7,9 @@ $year = date('Y');
 
 // Création d'un tableau associatif $pages avec le nom des pages et leurs URLs correspondantes
 $pages = array(
-    "Accueil" => "/index.php",
+    "Accueil" => "home.php",
     "Mes Pokemons" => "/page1.php",
-    "Tous les Pokemons" => "/page2.php"
+    "Tous les Pokemons" => "pokedex.php"
 );
 ?>
 
