@@ -17,9 +17,9 @@ include_once('retrivePokemon.php');
 <body>
 
 	<div id="links">
-		<button href='' id='pokedex_button'>Pokedex</button>
+		<button href='' id='pokedex_button'>Dresseurs à mettres au tapis</button>
 
-		<button>Dresseurs à mettres au tapis</button>
+	
 
 	</div>
 

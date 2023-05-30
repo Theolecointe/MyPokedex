@@ -33,7 +33,7 @@
    
       
       <div class="header-box"> 
-      <button onclick="window.location.href = 'page-info.html';">Mes Pokemons</button>
+      <button onclick="window.location.href = 'home.php';">Mes Pokemons</button>
     </div>
     <div class="header-box">
       <button onclick="window.location.href = 'page-pokedex.html';">Mes combats</button>
