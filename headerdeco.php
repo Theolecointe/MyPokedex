@@ -32,7 +32,7 @@
  <img src="pokedex2.png" alt="Logo Pokemon" class="header-image">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      
-        <button onclick="window.location.href = 'page-info-non-connecte.php';">Pokedex</button>
+        <button onclick="window.location.href = 'pokedex.php';">Pokedex</button>
       </div>
       <div class="header-box">
         <button onclick="window.location.href = 'page-connexion.php';">Info</button>
