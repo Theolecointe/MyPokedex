@@ -42,7 +42,7 @@
       <button onclick="window.location.href = 'pokedex.php';">Pokedex</button>
     </div>
     <div class="header-box">
-      <button onclick="window.location.href = 'page-mes-pokemons.html';">Info</button>
+      <button onclick="window.location.href = 'info.php';">Info</button>
     </div>
     <div class="header-box">
       <button onclick="window.location.href = 'formulaire.php';">Ajouter un Pokemon </button>
