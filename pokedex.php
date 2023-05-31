@@ -91,6 +91,7 @@
     <p>Feu/Vol</p>
   </div>
   <div class="footer">
+
 <?php include_once('footer/footer.php'); ?>
 <style>
 html,

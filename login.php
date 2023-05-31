@@ -80,7 +80,35 @@ else {
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" value="Se connecter"> <br> <br> <br> <br>
     <button onclick="window.location.href = 'createacc.php';">Créer son compte</button>
   </form>
+<?php include_once('footer/footer.php'); ?>
+<style>
 
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.page-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.content-wrapper {
+    padding-bottom: 2.5rem; /* Hauteur du pied de page */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6rem; /* Hauteur du pied de page */
+}
+
+.margin-top{
+	min:100vh;
+
+}
+</style>
 
 </body>
 </html>
