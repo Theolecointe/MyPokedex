@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -16,12 +17,13 @@ function doesUserHavePokemon($pokemonId) {
     // et vérifier si le Pokémon spécifié est présent dans cette liste
     
 $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats, region.nom as region_nom, type.nom as type FROM pokemon JOIN pokemons_existants ON pokemons_existants.id_Pokemon = pokemon.id JOIN dresseur ON dresseur.id = pokemons_existants.id_dresseur JOIN region ON pokemon.id_region = region.id JOIN est_de_type ON pokemon.id = est_de_type.id_pkmn JOIN type ON est_de_type.id_Type = type.id WHERE dresseur.nom = :nom_dresseur');
-	
-	$addmyPokemon -> execute([
+    
+    $addmyPokemon -> execute([
 
     return in_array($pokemonId, $userPokedex);
 }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -56,7 +58,8 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
 <body>
   <h1>Pokédex</h1>
   
-  <div class="pokemon">
+  <div class="pokemon"
+        value="BULBIZORRE">
     <img src="poke1.png" alt="Pokemon 1">
     <p>BULBIZORRE</p>
     <p>Plante</p>
@@ -67,7 +70,8 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
     <?php endif; ?>
   </div>
   
-  <div class="pokemon">
+    <div class="pokemon"
+        value="MYSTHERBE">
     <img src="poke2.png" alt="Pokemon 2">
     <p>MYSTHERBE</p>
     <p>Poison</p>
@@ -77,7 +81,8 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
         <button>Ajouter</button>
     <?php endif; ?>
   </div>
-  <div class="pokemon">
+   <div class="pokemon"
+        value="CANINOS">
     <img src="poke3.png" alt="Pokemon 1">
     <p>CANINOS</p>
     <p>Feu</p>
@@ -88,7 +93,8 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
     <?php endif; ?>
   </div>
   
-  <div class="pokemon">
+   <div class="pokemon"
+        value="TIPLOUF">
     <img src="poke4.png" alt="Pokemon 2">
     <p>TIPLOUF</p>
     <p>Eau</p>
@@ -98,7 +104,9 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
         <button>Ajouter</button>
     <?php endif; ?>
 
-  </div><div class="pokemon">
+  </div> 
+    <div class="pokemon"
+        value="ABRA">
     <img src="poke5.png" alt="Pokemon 1">
     <p>ABRA</p>
     <p>Psy</p>
@@ -109,7 +117,8 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
     <?php endif; ?>
   </div>
   
-  <div class="pokemon">
+   <div class="pokemon"
+        value="PYROBUT">
     <img src="poke6.png" alt="Pokemon 2">
     <p>PYROBUT</p>
     <p>Feu</p>
@@ -120,7 +129,8 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
     <?php endif; ?>
   </div>
 
-  <div class="pokemon">
+   <div class="pokemon"
+        value="RAICHU">
     <img src="poke7.png" alt="Pokemon 1">
     <p>RAICHU</p>
     <p>Elek</p>
@@ -131,7 +141,8 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
     <?php endif; ?>
   </div>
   
-  <div class="pokemon">
+   <div class="pokemon"
+        value="TENTACRUEL">
     <img src="poke8.png" alt="Pokemon 2">
     <p>TENTACRUEL</p>
     <p>Eau/Poison</p>
@@ -142,7 +153,8 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
     <?php endif; ?>
   </div>
 
-  <div class="pokemon">
+   <div class="pokemon"
+        value="MAGNETON">
     <img src="poke9.png" alt="Pokemon 1">
     <p>MAGNETON</p>
     <p>Acier</p>
@@ -153,7 +165,8 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
     <?php endif; ?>
   </div>
   
-  <div class="pokemon">
+   <div class="pokemon"
+        value="MEWTWO">
     <img src="poke10.png" alt="Pokemon 2">
     <p>MEWTWO</p>
     <p>Psy</p>
@@ -164,7 +177,8 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
     <?php endif; ?>
   </div>
 
-  <div class="pokemon">
+   <div class="pokemon"
+        value="ASPICOT">
     <img src="poke11.png" alt="Pokemon 1">
     <p>ASPICOT</p>
     <p>Plante/Poison</p>
@@ -175,7 +189,8 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
     <?php endif; ?>
   </div>
   
-  <div class="pokemon">
+    <div class="pokemon"
+        value="DRACAUFEU">
     <img src="poke12.png" alt="Pokemon 2">
     <p>DRACAUFEU</p>
     <p>Feu/Vol</p>
@@ -187,17 +202,6 @@ $addmyPokemon = $mysqlClient ->prepare('SELECT pokemon.nom, dresseur.nb_combats,
   </div>
 
   
-  <!-- Ajoutez le bouton pour les autres Pokémon ici -->
-  
-  <script>
-    function addToPokedex(pokemonId) {
-      // Effectuez ici la logique d'ajout du Pokémon au Pokédex
-      // Par exemple, vous pouvez envoyer une requête AJAX au serveur pour enregistrer le Pokémon dans la session
-      // ou mettre à jour une base de données
-      
-      // Voici un exemple qui affiche une alerte avec l'identifiant du Pokémon ajouté
-      alert('Le Pokémon avec l\'ID ' + pokemonId + ' a été ajouté à votre Pokédex!');
-    }
   </script>
 </body>
 </html>
